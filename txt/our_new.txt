@@ -1,0 +1,13 @@
+[
+{"news_name":"shuai_xue_new",
+"title":"少帅老师去学习深造",
+"time":"18年08月11日"},
+
+{"news_name":"sheng_ji_new",
+"title":"店铺升级",
+"time":"18年04月18日"},
+
+{"news_name":"xin_jian_new",
+"title":"明郎造型，濮阳分店开业",
+"time":"18年01月18日"}
+]

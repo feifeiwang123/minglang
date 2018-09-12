@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="description" content="时尚美发,美发造型,美容美发" />
+    <meta name="keywords" content="明郎护肤造型是由业内知名资深造型师少帅老师，带领业内资深护肤造型团队共同打造的专业护肤造型沙龙。">
+    <script>
+//                若设备为移动设备，则跳转加载移动端样式
+//                if(!(/(android|iphone|PlayBook|BB10)/i).test(window.navigator.userAgent)){
+//                    window.location.href = './index.html';
+//                }
+            ~function computedFontSize(desW) {
+                var winW = document.documentElement.clientWidth;
+                if (winW > desW) {/*设备宽度大于设计稿宽度时*/
+                    document.documentElement.style.fontSize = "100px";
+                } else {
+                    document.documentElement.style.fontSize = winW / desW * 100 + "px";
+                }
+            }(375);
+    </script>
+    <title>明郎造型</title>
+    <link rel="stylesheet" href="css/m-index.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="shortcut icon" type="image/x-icon" href="img/logo_icon.png" />
+    <script src="js/jquery-1.4.4.min.js"></script>
+</head>
+<body>
+
+<header class="m-header">
+    <a href="./m-index.html"><h1>明郎造型</h1></a>
+    <div class="pos_div">
+        <ul class="header-ul">
+            <li class="select"><a href="./index.html?1">首页</a></li>
+            <li><a href="./html/m-success.html?news_name=our_tea">师资力量</a></li>
+            <li><a href="./html/m-news.html">我们动态</a></li>
+            <li><a href="./html/m-success.html?news_name=our_pro">服务项目</a></li>
+            <li><a href="./html/m-content.html?news_name=find">招贤纳士</a></li>
+            <li><a href="./html/m-content.html?news_name=us">关于我们</a></li>
+            <li><a href="./html/m-content.html?news_name=contact">联系我们</a></li>
+        </ul>
+        <div id="header-btn">
+            <a class="the-arr arrow-b" href="javascript:;"></a>
+        </div>
+
+    </div>
+
+</header>
+<div class="all-content">
+    <section class="c-first">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" style="position: relative;">
+                    <a href="http://www.baidu.com"><img data-src="img/logo.jpg" class="swiper-lazy"/></a>
+
+                    <div class="swiper-lazy-preloader-white"></div>
+
+                </div>
+
+                <div class="swiper-slide">
+                    <a href=""><img data-src="img/logo.jpg" class="swiper-lazy"/></a>
+
+                    <div class="swiper-lazy-preloader-white"></div>
+
+                </div>
+
+                <div class="swiper-slide">
+                    <a href=""><img data-src="img/logo.jpg" class="swiper-lazy"/></a>
+
+                    <div class="swiper-lazy-preloader-white"></div>
+                </div>
+            </div>
+
+            <!--如果需要分页器-->
+            <div class="swiper-pagination" style="bottom: .20rem;" id="swiper-paginationFir"></div>
+
+        </div>
+    </section>
+
+    <section class="c-banner">
+        <ul class="banner-ul clear">
+            <li><a href="./html/m-success.html?news_name=outsource">师资力量
+                <img src="./img/images/hjwaibao.png" alt=""></a></li>
+            <li><a href="./html/m-news.html">我们动态
+                <img src="./img/images/news.png" alt=""></a></li>
+            <li><a href="./html/m-success.html?news_name=success_case">服务项目
+                <img src="./img/images/chenggong.png" alt=""></a></li>
+            <li><a href="./html/m-content.html?news_name=find">招贤纳士
+                <img src="./img/images/zhaopin.png" alt=""></a></li>
+            <li><a href="./html/m-content.html?news_name=us">关于我们
+                <img src="./img/images/friend.png" alt=""></a></li>
+            <li><a href="./html/m-content.html?news_name=contact">联系我们
+                <img src="./img/images/lianxi.png" alt=""></a></li>
+        </ul>
+    </section>
+
+    <section class="c-img" style="">
+        <ul class="img-ul clear">
+            <li><img src="./img/work1.jpg" alt=""></li>
+            <li><img src="./img/work1.jpg" alt=""></li>
+            <li><img src="./img/work1.jpg" alt=""></li>
+            <li><img src="./img/work1.jpg" alt=""></li>
+            <li><img src="./img/work1.jpg" alt=""></li>
+        </ul>
+    </section>
+
+
+    <section class="c-teachers">
+        <div class="content-title">
+            <span>师资力量</span>
+        </div>
+        <ul class="teachers-ul clear" id="teachers-ul">
+            <li class="">
+                <a href="./html/m-content.html?news_name=shuai_tea">
+                    <img src="img/teacher/shuai.jpg" alt="">
+                </a>
+            </li>
+        </ul>
+
+    </section>
+
+
+
+    <section style=" " class="c-the-news">
+        <div class="content-title">
+            <span>我们动态</span>
+        </div>
+        <ul class="ul_news" id="c-news-t">
+            <li>
+                <div class="div_left"></div>
+                <div class="div_right"></div>
+                <a href="">
+                    <h4>客服十年，哪些甜言蜜语让客户服服帖帖？</h4>
+                    <div class="new-span">18年04月27日</div>
+                </a>
+            </li>
+            <li>
+                <div class="div_left"></div>
+                <div class="div_right"></div>
+                <a href="">
+                    <h4>客服十年，哪些甜言蜜语让客户服服帖帖？</h4>
+                    <div class="new-span">18年04月27日</div>
+                </a>
+            </li>
+        </ul>
+    </section>
+
+
+
+    <section class="c-project">
+        <div class="content-title">
+            <span>服务项目</span>
+        </div>
+        <ul class="project-ul" id="the_ul">
+
+        </ul>
+    </section>
+
+
+    <section class="c-about">
+        <div class="content-title">
+            <span>公司概况</span>
+        </div>
+        <div class="about-content">
+            <a href="./html/m-content.html?news_name=us">明郎护肤造型是由业内知名资深造型师少帅老师，带领业内资深护肤造型团队共同打造的专业护肤造型沙龙。明郎自2009创立以来在郑州北京等地开设8家大型护肤造型连锁机构。我们以诚信服务，赢得了广大客户的信任与支持。我们以国际化的视野，独特的设计理念为您打造不一样的形象，让您的生活更加的自信，等价的靓丽多彩。</a>
+        </div>
+    </section>
+
+
+    <section class="c-t-top clear">
+        <a href="javascript:;" class="t-top-content">
+            <div class="t-top-div">Top</div>
+            <div class="t-top-div" id="triangle"></div>
+        </a>
+    </section>
+
+</div>
+
+<div class="contact_us clear">
+    <a class="ask_qq" title="QQ在线咨询，请先登录QQ" href="http://wpa.qq.com/msgrd?v=3&amp;uin=810340058&amp;site=qq&amp;menu=yes" target="_blank">
+        <img src="./img/m_qq.png" alt="">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;QQ咨询
+    </a>
+    <a class="call_number" href="tel:185 6818 0663">
+        <img src="./img/m_phone.png" alt="">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;联系我们</a>
+</div>
+
+
+<footer>
+    <div>联系电话：<a href="tel:185 6818 0663" style="color:#3285ff">185 6818 0663</a></div>
+    <div>邮箱：810340058@qq.com</div>
+    <div>明郎造型</div>
+    <div>地址：濮阳市华龙区明朗造型</div>
+</footer>
+
+
+
+</body>
+</html>
+<script type="text/javascript" src="./js/swiper.min.js"></script>
+<script type="text/javascript">
+//    var href = document.getElementsByTagName('a');
+//    for(var i=0;i<href.length;i++){
+//        href[i].ontouchend=function(){
+//            window.location.href=this.getAttribute("href");
+//        }
+//    }
+
+    $('.t-top-content').click(function(){
+        $('body,html').animate({scrollTop: 0}, 400);
+    });
+
+    var mySwiper = new Swiper('.swiper-container', {
+        autoplay: 3000,
+        autoplayDisableOnInteraction: false,
+        speed: 500,
+        loop: true,
+        pagination: '.swiper-pagination',
+        lazyLoading: true,
+        lazyLoadingInPrevNext: true,
+        onInit: function () {
+            document.getElementById("swiper-paginationFir").style.display = "block";
+        }
+    });
+    $("#header-btn").click(function(){
+        var theF = $(".pos_div").height();
+        var theH = $(".header-ul").height();
+//        console.log("111111"+theF+"   ss"+theH);
+        if(theH<theF){
+            $(".header-ul").animate({"height" :theF*2+"px"}, 300);
+            $(".the-arr").removeClass("arrow-b").addClass("arrow-t");
+        }else {
+            $(".header-ul").animate({"height" :theF+"px"}, 300);
+            $(".the-arr").removeClass("arrow-t").addClass("arrow-b");
+        }
+    });
+
+
+    //  师资力量
+    var json = null;
+    var xhr = new XMLHttpRequest();
+    xhr.open("get", "./txt/our_tea.txt?_="+Math.random(), false);
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState == 4 && /^2\d{2}$/.test(xhr.status)) {
+            json = JSON.parse(xhr.responseText);
+            //console.log(jsonData);
+        }
+    };
+    xhr.send();
+    var arr = [];
+    json.forEach(function(item,index){
+        if(index <= 5){
+            arr.push(item);
+        }
+    });
+    var str ='';
+    arr.forEach(function(item){
+        var str_img = item.img;
+        str_img = str_img.substring(1);
+        str += '<li class=""><a href="./html/m-content.html?news_name='+item.news_name+'"><img src="'+ str_img +'" alt=""></a></li>';
+    });
+    document.getElementById("teachers-ul").innerHTML = str;
+
+
+
+
+    //我们动态
+
+    var json2 = null;
+    var xhr_s = new XMLHttpRequest();
+    xhr_s.open("get", "./txt/our_new.txt?_="+Math.random(), false);
+    xhr_s.onreadystatechange = function () {
+        if (xhr_s.readyState == 4 && /^2\d{2}$/.test(xhr_s.status)) {
+            json2 = JSON.parse(xhr_s.responseText);
+            //console.log(jsonData);
+        }
+    };
+    xhr_s.send();
+    var arr2 = [];
+    json2.forEach(function(item,index){
+        if(index<=2){
+            arr2.push(item);
+        }
+    });
+
+    var str_s ='';
+arr2.forEach(function(item){
+        str_s += '<li class="clear"><div class="div_left"></div><div class="div_right"></div><a href="./html/m-content.html?news_name='+item.news_name+'"title="'+item.title+'"><h4>'+item.title+'</h4><div class="new-span">'+item.time+'</div></a></li>';
+    });
+    document.getElementById("c-news-t").innerHTML = str_s;
+
+
+
+    //服务项目
+    var json3 = null;
+    var xhr3 = new XMLHttpRequest();
+    xhr3.open("get", "./txt/our_pro.txt?_="+Math.random(), false);
+    xhr3.onreadystatechange = function () {
+            if (xhr3.readyState == 4 && /^2\d{2}$/.test(xhr3.status)) {
+                json3 = JSON.parse(xhr3.responseText);
+                //console.log(jsonData);
+            }
+        };
+    xhr3.send();
+        var arr3 = [];
+        json3.forEach(function(item,index){
+            if(index<=2){
+                arr3.push(item);
+            }
+        });
+
+        var str3 ='';
+        arr3.forEach(function(item){
+                var str =  item.img.replace(".","");
+//            var str =  item.img;
+            str3 += '<li class="pro"><a  href="./html/m-content.html?news_name='+item.news_name+'"><img src='+str+'><p title='+item.title+'><span>'+item.title+'</span></p></a></li>'
+        });
+    document.getElementById("the_ul").innerHTML = str3;
+
+
+</script>

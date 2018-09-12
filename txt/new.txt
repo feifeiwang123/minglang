@@ -1,0 +1,17 @@
+[
+{"news_name":"shuai_xue_new",
+"nav_name":"5",
+"title":"少帅老师去学习深造",
+"text1":"少帅老师去学习深造l11111"},
+
+{"news_name":"sheng_ji_new",
+"nav_name":"5",
+"title":"店铺升级",
+"text1":"sheng_ji_new222222222"},
+
+{"news_name":"xin_jian_new",
+"nav_name":"5",
+"title":"明郎造型，濮阳分店开业",
+"text1":"明郎造型，濮阳分店开业3333333333"}
+
+]

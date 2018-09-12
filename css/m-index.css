@@ -1,0 +1,506 @@
+body, div, ul, ol, li, dl, dt, dd, h1, h2, h3, h4, h5, h6, p, table, tbody, thead, tfoot, tr, th, td, caption, a, input, form, select, option, label, textarea, img, span, i, b, em, strong, sub, sup, u {
+    margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);/*去掉a标签,input,button等按钮的默认边框和背景色*/
+    -webkit-overflow-scrolling:touch;/*增加滚动效果,让滚动效果更加流畅*/
+    /*-webkit-user-select: none;!*禁止用户选中文本内容*!*/
+    font-family: "\5FAE\8F6F\96C5\9ED1", Helvetica, sans-serif;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+i, em {
+    font-style: normal;
+}
+
+ul, ol {
+    list-style: none;
+}
+li{
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+
+img, input {
+    border: none;
+    outline: none;
+}
+
+.clear {
+    clear: both;
+    content: " ";
+    display: table;
+}
+.none{
+    display: none !important;
+}
+
+.w100B{
+    width: 100%;
+}
+
+a, a:hover, a:visited, a:target {
+    text-decoration: none;
+}
+
+a {
+    cursor: pointer;
+    color: #424242;
+}
+html {font-size: 62.5%;/*10 ÷ 16 × 100% = 62.5%*/}
+body {font-size: .14rem;/*1.4 × 10px = 14px */}
+h1 { font-size: .24rem;/*2.4 × 10px = 24px*/}
+/*-------------  清除默认样式  end  ---------------*/
+
+
+/* ----------------- header begin -----------*/
+.m-header h1{
+    font-weight: normal;
+    font-size: .18rem;
+    height: .5rem;
+    line-height: .5rem;
+    text-align: center;
+    color: #3285ff;
+}
+.m-header .pos_div{
+    position: relative;
+    height: .4rem;
+}
+.m-header .header-ul{
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    background: #fff;
+    border-top: 1px solid #3285ff;
+    border-bottom: 1px solid #3285ff;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+.m-header .header-ul li{
+    display: inline-block;
+    height: .4rem;
+    line-height: .4rem;
+    font-size: .16rem;
+    text-align: center;
+}
+
+.m-header .header-ul li a{
+    color: #3285ff;
+    display: block;
+    padding: 0 .14rem;
+}
+.m-header .header-ul li.select{
+    background-color: #3285ff;
+}
+
+.m-header .header-ul li.select a{
+    color: #fff;
+}
+#header-btn{
+    position: absolute;
+    z-index: 200;
+    right: 0;
+    top: 0;
+    width: .2rem;
+    height: 100%;
+}
+.pos_div .the-arr{
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: .15rem;
+    height: .15rem;
+    margin-top: -.05rem;
+}
+.pos_div .arrow-b{
+    background: url("../img/arrow-b.png")no-repeat;
+    background-size: 100%;
+}
+
+.pos_div .arrow-t{
+    background: url("../img/arrow-t.png")no-repeat;
+    background-size: 100%;
+}
+/* ----------------- header end -----------*/
+
+
+
+
+
+/* ------------------- c-first begin --------------------*/
+.c-first{
+    /*margin-top: .02rem;*/
+}
+.swiper-container, .swiper-wrapper, .swiper-slide {
+    height: 2rem;
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-pagination {
+    display: none;
+}
+
+.text-content{
+    position: absolute;
+    left: 5%;
+    top: 25%;
+    color: #fff;
+    font-size: .22rem;
+    display: none;
+}
+.text-content h2{
+    font-weight: normal;
+    font-size: .22rem;
+}
+.text-content p{
+    margin-top: .05rem;
+    font-size: .12rem;
+    line-height: .18rem;
+}
+/* ------ c-first end -----------*/
+
+/* ------ c-img begin --------------------*/
+.c-img{
+}
+.c-img .img-ul {
+    margin: 0 1%;
+    width: 98%;
+}
+.c-img .img-ul li{
+    width: 20%;
+    float: left;
+}
+.c-img .img-ul li img{
+    margin: 2%;
+    border-radius: 4px;
+    width: 96%;
+    height: 96%;
+}
+
+/* ------ c-img end ---------------------*/
+
+
+
+/* ------ c-banner begin -----------*/
+.c-banner{
+    margin-top: .1rem;
+}
+.c-banner .banner-ul{
+    margin:2%;
+    width: 96%;
+}
+.c-banner .banner-ul li{
+    position: relative;
+    width: 49%;
+    margin-top: 2%;
+    padding: .3rem;
+    float: left;
+    background: #3285ff;
+    border-radius: .1rem;
+    font-size: .16rem;
+}
+.c-banner .banner-ul li a{
+    color: #fff;
+}
+.c-banner .banner-ul li:nth-child(2),.c-banner .banner-ul li:nth-child(3),.c-banner .banner-ul li:nth-child(6){
+    background: black;
+}
+.c-banner .banner-ul li:nth-child(even){
+    margin-left: 2%;
+}
+.c-banner .banner-ul li img{
+    position: absolute;
+    top: 50%;
+    right: 15%;
+    margin-top: -.17rem;
+    width: .35rem;
+}
+/* -------------------- c-banner end ----------------------*/
+
+
+/* ---------------------- c-news begin ------------------*/
+.c-news{
+    padding-top: .2rem;
+    padding-bottom: .2rem;
+}
+.c-news .news-ul{
+    width: 100%;
+}
+.c-news .news-ul li{
+    border-bottom: 1px solid #ccc;
+    padding: 0 .1rem;
+    height: .65rem;
+}
+.c-news .news-ul li a{
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+.c-news .news-ul li div{
+    float: left;
+    padding-top: .25rem;
+    padding-bottom: .1rem;
+    font-size: .16rem;
+    width: 75%;
+    height: 100%;
+}
+.c-news .news-ul li img{
+    float: right;
+    width: 25%;
+    padding: .1rem;
+}
+
+/* ---------------------- c-news end ------------------*/
+
+
+
+
+
+.content-title{
+    border-bottom: 1px solid #3285ff;
+}
+.content-title span{
+    display: inline-block;
+    border-top-right-radius: .2rem;
+    padding: .05rem .1rem;
+    font-size: .16rem;
+    color: #fff;
+    background: #3285ff;
+}
+/* ---------------------- c-teachers begin ------------------*/
+.c-teachers{
+    padding-top: .2rem;
+}
+.c-teachers .teachers-ul{
+    padding: .2rem .2rem 0;
+}
+.c-teachers .teachers-ul li{
+    float: left;
+    width: 33.33%;
+    padding: .05rem .1rem;
+}
+.c-teachers .teachers-ul li img{
+    width: 100%;
+}
+/* ---------------------- c-teachers end ------------------*/
+
+/* ---------------------- c-project begin ------------------*/
+.c-project{
+}
+
+/* ---------------------- c-project end ------------------*/
+
+
+
+
+
+/* ---------------------- c-the-news begin ------------------*/
+.c-the-news{
+    padding-top: .2rem;
+    padding-bottom: .2rem;
+}
+.c-the-news .ul_news li{
+    width: 100%;
+    position: relative;
+    border-bottom: 1px solid #D6D6D6;
+}
+.c-the-news .ul_news li .div_left,.c-the-news .ul_news li .div_right{
+    position: absolute;
+}
+.c-the-news .ul_news li .div_left{
+    left: .08rem;
+    top: .15rem;
+    width: .07rem;
+    height: .1rem;
+    background: #007aff;
+}
+.c-the-news .ul_news li .div_right{
+    right: .1rem;
+    top: 50%;
+    margin-top: -.1rem;
+    width: .2rem;
+    height: .2rem;
+    background: url("../img/right.png") no-repeat;
+    background-size: 100%;
+}
+.c-the-news .ul_news li a{
+    display: block;
+    padding: .07rem .2rem;
+}
+.c-the-news .ul_news li h4{
+    padding-top: .05rem;
+    font-weight: normal;
+}
+
+.c-the-news .ul_news li a .new-span{
+    font-size: .14rem;
+    color: #B1B1B1;
+    padding-top: .05rem;
+}
+
+/* ---------------------- c-the-news end ------------------*/
+
+
+/* ---------------------- c-about begin ------------------*/
+.c-about{padding-bottom: .1rem}
+.c-about .about-content a{
+    display: block;
+    padding: .1rem;
+    line-height: .22rem;
+    color: #8B8B8B;
+}
+/* ---------------------- c-about end ------------------*/
+
+
+
+
+/* ---------------------- c-t-top begin ------------------*/
+.c-t-top{
+    width: 100%;
+    background: #3285ff;
+    margin-bottom: .1rem;
+}
+.t-top-content{
+    color: #fff;
+    padding-right: .1rem;
+    float: right;
+}
+.t-top-content .t-top-div{
+    display: inline-block;
+    padding: .06rem 0;
+}
+#triangle {
+    width: 0;
+    height: 0;
+    border-bottom: 8px solid #fff;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+}
+/* ---------------------- c-about end ------------------*/
+
+
+
+/*---------- footer the up 开始 -----------*/
+.contact_us{
+    position: fixed;
+    bottom: 0;
+    font-size: .16rem;
+    height: .4rem;
+    line-height: .4rem;
+    width: 100%;
+    text-align: center;
+}
+.contact_us .ask_qq{
+    float: left;
+    width: 50%;
+    height: 100%;
+    background: #00A5FF;
+    color: #fff;
+    position: relative;
+}
+.contact_us .call_number{
+    float: right;
+    width: 50%;
+    height: 100%;
+    background: royalblue;
+    color: #fff;
+    position: relative;
+}
+.contact_us .ask_qq img,.contact_us .call_number img{
+    position: absolute;
+    top: 13%;
+    width: 15%;
+}
+/*---------- footer the up 结束 -----------*/
+
+/* ---------------------- footer begin ------------------*/
+footer{padding-bottom: .5rem;}
+footer div{
+    text-align: center;
+    padding-top: .03rem;
+    color: #8B8B8B;
+}
+
+/* ---------------------- footer end ------------------*/
+
+
+
+
+
+
+
+
+
+/*------------------ m-success.html begin -----------------*/
+.c-success{
+    padding: .1rem 0;
+}
+#the_ul{
+    width: 100%;
+}
+#the_ul li{
+    margin-top: 3%;
+    /*height: 1rem;*/
+    width: 33.3%;
+    padding: 2%;
+    float: left;
+    text-align: center;
+}
+#the_ul li.pro{
+    height: 2.4rem;
+}
+
+#the_ul li img{
+    width: 100%;
+    height: 80%;
+}
+.btn_ul{
+    margin-top: .1rem;
+    width: 100%;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+.btn_ul li{
+    padding: .1rem;
+    float: left;
+}
+/*------------------ m-success.html end -----------------*/
+
+
+
+/*------------------ m-news.html begin -----------------*/
+
+/*------------------ m-news.html end -----------------*/
+
+
+
+
+/*------------------ m-content.html begin -----------------*/
+.title{
+    text-align: center;
+    font-size: .16rem;
+}
+.ul_li_text li{
+    padding-top: .1rem;
+    color: #666;
+    overflow: hidden;
+}
+.mobile{
+    padding: .01rem .1rem .1rem .1rem;
+}
+.mobile ul li img{
+    width: 100%;
+    padding:0 3% !important;
+}
+.mobile ul.tea_ul li img{
+    margin-left: 25%;
+    width: 50%;
+}
+
+/*------------------ m-content.html end -----------------*/

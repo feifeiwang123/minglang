@@ -1,0 +1,19 @@
+[
+{"news_name":"us",
+"nav_name":"1",
+"title":"关于明郎造型",
+"text1":"<ul class='ul_li_text' style='color: #595959;'><li style='text-align: center;font-weight: bold;'>明郎造型企业介绍</li><li>明郎护肤造型是由业内知名资深造型师少帅老师，带领业内资深护肤造型团队共同打造的专业护肤造型沙龙。明郎自2009创立以来在郑州北京等地开设8家大型护肤造型连锁机构。我们以诚信服务，赢得了广大客户的信任与支持。我们以国际化的视野，独特的设计理念为您打造不一样的形象，让您的生活更加的自信，等价的靓丽多彩。</li><li style='text-align:center;'><img width='200px' src='../img/logo_about.jpg' alt=''></li></ul><ul class='ul_li_text' style='color: #595959;padding-top: .1rem'><li style='text-align: center;font-weight: bold;'>明郎造型企业文化</li><li style='text-align: center;'>我们的经营宗旨：</li><li style='text-align: center; padding-left: 1rem'>服务为本，顾客至上。</li><li style='text-align: center;'>我们的工作态度是：</li><li style='text-align: center; padding-left: 1rem'>认真、快、坚守承诺。</li></ul>"},
+
+
+{"news_name":"find",
+"nav_name":"6",
+"title":"招贤纳士",
+"text1":"<ul class='ul_li_text' style='color: rgb(62, 62, 62);'><li><h2 style='font-size: 18px;'>招聘岗位：美发师</h2></li><li>岗位职责：以良好的仪态、精神，为顾客提供专业化的美发服务。。</li><li>任职要求： 1.男女不限</li><li style='padding-left: 75px;'>2.以服务的理念，注重自我修养，并提升个人的美发技术；</li><li style='padding-left: 75px;'>3.学会并养成赞美顾客的好习惯，成为顾客信赖的美发专家；</li><li style='padding-left: 75px;'>4.负责美发工具、产品的补充、清洁、消毒等工作，为顾客提供整洁、舒适的服务环境；</li><li style='font-weight: bold'>工作(面试)地点：濮阳市华龙区明郎造型</li><li style='font-weight: bold'>薪金待遇：工资面议 + 各种福利</li><li style='font-weight: bold'>咨询电话：185 6818 0663（安先生）</li></ul>"},
+
+
+{"news_name":"contact",
+"nav_name":"7",
+"title":"联系我们",
+"text1":"<div style='font-size: 16px;display: inline-block;'>我们的名称：明郎造型<br>我们的地址：濮阳市华龙区<br>邮编：457001<br>电话：<a href='tel:185 6818 0663' style='color:#3285ff'>185 6818 0663</a><br>电子邮箱：<a  style='color:#3285ff;' href='mailto:810340058@qq.com'>810340058@qq.com</A> </div><div style='display: inline-block;'><img style='width:100%' src='../img/logo_about.jpg' alt=''></div>"}
+
+]

@@ -1,0 +1,22 @@
+[
+{"news_name":"xi_pro",
+"nav_name":"4",
+"title":"时尚洗发",
+"text1":"<ul class='win_txt'><li><img src='../img/xi.jpg' alt=''></li><li>时尚洗发有水洗、干洗、香蕈理疗洗发、洗面。</li></ul>"},
+
+{"news_name":"ran_pro",
+"nav_name":"4",
+"title":"时尚染发",
+"text1":"<ul class='win_txt'><li><img src='../img/ran.jpg' alt=''></li><li>时尚染发，双色染，挑染，全染，漂染。</li></ul>"},
+
+{"news_name":"tang_pro",
+"nav_name":"4",
+"title":"时尚烫发",
+"text1":"<ul class='win_txt'><li><img src='../img/tang.jpg' alt=''></li><li>时尚烫发有冷烫，热烫，离子烫。</li></ul>"},
+
+{"news_name":"jian_pro",
+"nav_name":"4",
+"title":"时尚精剪",
+"text1":"<ul class='win_txt'><li><img src='../img/jian.jpg' alt=''></li><li>精剪 吹风 造型，扎发，整体造型化妆。</li></ul>"}
+
+]

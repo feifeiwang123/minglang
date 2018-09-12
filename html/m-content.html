@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="description" content="时尚美发,美发造型,美容美发" />
+    <meta name="keywords" content="明郎护肤造型是由业内知名资深造型师少帅老师，带领业内资深护肤造型团队共同打造的专业护肤造型沙龙。">
+    <script>
+        //        若设备为移动设备，则跳转加载移动端样式
+        //                if((/(android|iphone|PlayBook|BB10)/i).test(window.navigator.userAgent)){
+        //                    window.location.href = './m-index.html';
+        //                }
+        ~function computedFontSize(desW) {
+            var winW = document.documentElement.clientWidth;
+            if (winW > desW) {/*设备宽度大于设计稿宽度时*/
+                document.documentElement.style.fontSize = "100px";
+            } else {
+                document.documentElement.style.fontSize = winW / desW * 100 + "px";
+            }
+        }(375);
+    </script>
+    <title>明郎造型</title>
+    <link rel="stylesheet" href="../css/m-index.css">
+    <link rel="shortcut icon" type="image/x-icon" href="../img/logo_icon.png" />
+    <script src="../js/jquery-1.4.4.min.js"></script>
+    <style>
+        #index_new{padding-top: 10px;}
+        #index_new li{
+            border-bottom: 1px dashed #ccc;
+            height: 35px;
+            line-height: 35px;
+            font-size: 14px;
+            word-break: keep-all;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        #index_new li a:hover{
+            color: #f86001;
+        }
+        #index_new li:last-child{
+            border: none;
+        }
+        #map img { max-width: inherit; }
+        .iw_poi_title {color:#CC5522;font-size:14px;font-weight:bold;overflow:hidden;padding-right:13px;white-space:nowrap}
+        .iw_poi_content {font:12px arial,sans-serif;overflow:visible;padding-top:4px;white-space:-moz-pre-wrap;word-wrap:break-word}
+    </style>
+</head>
+<body>
+    <header class="m-header">
+        <a href="../m-index.html"><h1>明郎造型</h1></a>
+        <div class="pos_div">
+            <ul class="header-ul">
+                <li class="select"><a href="../index.html?1">首页</a></li>
+                <li><a href="../html/m-success.html?news_name=our_tea">师资力量</a></li>
+                <li><a href="../html/m-news.html">我们动态</a></li>
+                <li><a href="../html/m-success.html?news_name=our_pro">服务项目</a></li>
+                <li><a href="../html/m-content.html?news_name=find">招贤纳士</a></li>
+                <li><a href="../html/m-content.html?news_name=us">关于我们</a></li>
+                <li><a href="../html/m-content.html?news_name=contact">联系我们</a></li>
+            </ul>
+            <div id="header-btn">
+                <a class="the-arr arrow-b" href="javascript:;"></a>
+            </div>
+
+        </div>
+
+    </header>
+
+
+<div style="padding-top: .1rem; padding-bottom: .5rem">
+    <div class="content-title" style="margin-bottom: .1rem">
+        <span class="title">成功案例</span>
+    </div>
+    <div class="mobile">
+
+    </div>
+</div>
+
+
+
+
+<div class="contact_us clear">
+    <a class="ask_qq" title="QQ在线咨询，请先登录QQ" href="http://wpa.qq.com/msgrd?v=3&amp;uin=810340058&amp;site=qq&amp;menu=yes" target="_blank">
+        <img src="../img/m_qq.png" alt="">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;QQ咨询
+    </a>
+    <a class="call_number" href="tel:185 6818 0663">
+        <img src="../img/m_phone.png" alt="">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;联系我们
+    </a>
+</div>
+</body>
+</html>
+<script src="./../js/getUrlParam.js"></script>
+<script>
+    var jsonData = null;
+    var nav_number = null;//移动端 索引
+    var news_name = UrlParm.parm("news_name");//静态跳转后获取到 参数
+    //    console.log("ahaha 名字",news_name);
+    var str = news_name.substr(news_name.length-3,3);
+    console.log(str);
+
+    var xhr = new XMLHttpRequest();
+    if(str=="new"){
+        xhr.open("get", "../txt/new.txt?_="+Math.random(), false);
+        nav_number = 2;
+    }else if(str=="pro"){
+        xhr.open("get", "../txt/pro.txt?_="+Math.random(), false);
+        nav_number = 3;
+    } else if(str=="tea"){//公司动态
+        xhr.open("get", "../txt/tea.txt?_="+Math.random(), false);
+        nav_number = 1;//移动端 索引
+    } else {
+        xhr.open("get", "../txt/txt.txt?_="+Math.random(), false);
+        if(str=="s"){//关于我们
+            nav_number = 5;//移动端 索引
+        }else if(str=="ind"){//招贤纳士
+            nav_number = 4;//移动端 索引
+        }else if(str=="act"){//联系我们
+            nav_number = 6;//移动端 索引
+        }
+    }
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState == 4 && /^2\d{2}$/.test(xhr.status)) {
+            jsonData = JSON.parse(xhr.responseText);
+//            console.log(jsonData);
+        }
+    };
+
+    xhr.send();
+
+        $(document).ready(function(){
+//            $(".title").css("paddingTop",$(".pos_div").height()+10);
+            the_txt(news_name,jsonData);
+        });
+
+        function the_txt(name,jsonData){
+            jsonData.forEach(function(item){
+                if(item.news_name==name){
+                    $(".title").html(item.title);
+                    $(".mobile").html(item.text1);
+                    $(".header-ul>li").removeClass("select");
+                    $(".header-ul>li").eq(nav_number).addClass("select");
+                }
+
+            });
+        }
+
+
+
+    $("#header-btn").click(function(){
+        var theF = $(".pos_div").height();
+        var theH = $(".header-ul").height();
+//        console.log("111111"+theF+"   ss"+theH);
+        if(theH<theF){
+            $(".header-ul").animate({"height" :theF*2+"px"}, 300);
+            $(".the-arr").removeClass("arrow-b").addClass("arrow-t");
+        }else {
+            $(".header-ul").animate({"height" :theF+"px"}, 300);
+            $(".the-arr").removeClass("arrow-t").addClass("arrow-b");
+        }
+    });
+</script>
+

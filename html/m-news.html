@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="description" content="时尚美发,美发造型,美容美发" />
+    <meta name="keywords" content="明郎护肤造型是由业内知名资深造型师少帅老师，带领业内资深护肤造型团队共同打造的专业护肤造型沙龙。">
+    <script>
+        //                若设备为移动设备，则跳转加载移动端样式
+//        if(!(/(android|iphone|PlayBook|BB10)/i).test(window.navigator.userAgent)){
+//            window.location.href = './index.html';
+//        }
+        ~function computedFontSize(desW) {
+            var winW = document.documentElement.clientWidth;
+            if (winW > desW) {/*设备宽度大于设计稿宽度时*/
+                document.documentElement.style.fontSize = "100px";
+            } else {
+                document.documentElement.style.fontSize = winW / desW * 100 + "px";
+            }
+        }(375);
+    </script>
+    <title>明郎造型</title>
+    <link rel="stylesheet" href="../css/m-index.css">
+    <link rel="shortcut icon" type="image/x-icon" href="../img/logo_icon.png" />
+    <script src="../js/jquery-1.4.4.min.js"></script>
+</head>
+<body>
+
+<header class="m-header">
+    <a href="../m-index.html"><h1>明郎造型</h1></a>
+    <div class="pos_div">
+        <ul class="header-ul">
+            <li><a href="../index.html?1">首页</a></li>
+            <li><a href="../html/m-success.html?news_name=our_tea">师资力量</a></li>
+            <li class="select"><a href="../html/m-news.html">我们动态</a></li>
+            <li><a href="../html/m-success.html?news_name=our_pro">服务项目</a></li>
+            <li><a href="../html/m-content.html?news_name=find">招贤纳士</a></li>
+            <li><a href="../html/m-content.html?news_name=us">关于我们</a></li>
+            <li><a href="../html/m-content.html?news_name=contact">联系我们</a></li>
+        </ul>
+        <div id="header-btn">
+            <a class="the-arr arrow-b" href="javascript:;"></a>
+        </div>
+
+    </div>
+
+</header>
+<div class="all-content">
+
+    <section class="c-the-news" style="padding-top: .2rem">
+        <div class="content-title">
+            <span>新闻动态</span>
+        </div>
+        <ul class="ul_news" id="news-ul">
+            <li>
+                <div class="div_left"></div>
+                <div class="div_right"></div>
+                <a href="">
+                    <h4>客服十年，哪些甜言蜜语让客户服服帖帖？</h4>
+                    <div class="new-span">18年04月27日</div>
+                </a>
+            </li>
+        </ul>
+
+        <ul class="btn_ul clear">
+            <li title="第一页" id="spanFirst">第一页</li>
+            <li title="上一页" id="spanPre">上一页</li>
+            <li>第&nbsp;<span id="spanPageNum"></span>&nbsp;页/
+                共&nbsp;<span id="spanTotalPage"></span>&nbsp;页</li>
+            <li>共&nbsp;<span id="the_note"></span>&nbsp;条记录</li>
+            <li title="下一页" id="spanNext">下一页</li>
+            <li title="最后一页" id="spanLast">最后一页</li>
+            <li id="li_btn">第&nbsp;&nbsp;<input id="count" value="" placeholder="请输入正确数字页码"/>&nbsp;&nbsp;页 <button id="btn">↺ </button></li>
+        </ul>
+    </section>
+
+
+    <section class="c-t-top clear">
+        <a href="javascript:;" class="t-top-content">
+            <div class="t-top-div">Top</div>
+            <div class="t-top-div" id="triangle"></div>
+        </a>
+    </section>
+
+</div>
+
+<div class="contact_us clear">
+    <a class="ask_qq" title="QQ在线咨询，请先登录QQ" href="http://wpa.qq.com/msgrd?v=3&amp;uin=810340058&amp;site=qq&amp;menu=yes" target="_blank">
+        <img src="../img/m_qq.png" alt="">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;QQ咨询
+    </a>
+    <a class="call_number" href="tel:185 6818 0663">
+        <img src="../img/m_phone.png" alt="">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;联系我们</a>
+</div>
+
+
+<footer>
+    <div>联系电话：<a href="tel:185 6818 0663" style="color:#3285ff">185 6818 0663</a></div>
+    <div>邮箱：810340058@qq.com</div>
+    <div>明郎造型</div>
+    <div>地址：濮阳市华龙区明朗造型</div>
+</footer>
+
+
+
+</body>
+</html>
+<script type="text/javascript">
+    $('.t-top-content').click(function(){
+        $('body,html').animate({scrollTop: 0}, 400);
+    });
+
+    $("#header-btn").click(function(){
+        var theF = $(".pos_div").height();
+        var theH = $(".header-ul").height();
+//        console.log("111111"+theF+"   ss"+theH);
+        if(theH<theF){
+            $(".header-ul").animate({"height" :theF*2+"px"}, 300);
+            $(".the-arr").removeClass("arrow-b").addClass("arrow-t");
+        }else {
+            $(".header-ul").animate({"height" :theF+"px"}, 300);
+            $(".the-arr").removeClass("arrow-t").addClass("arrow-b");
+        }
+    });
+
+
+    //  新闻动态
+    var json = null;
+    var xhr = new XMLHttpRequest();
+    xhr.open("get", "../txt/our_new.txt?_="+Math.random(), false);
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState == 4 && /^2\d{2}$/.test(xhr.status)) {
+            json = JSON.parse(xhr.responseText);
+            //console.log(jsonData);
+        }
+    };
+    xhr.send();
+    var arr = [];
+    json.forEach(function(item,index){
+        if(index<=4){
+
+        }
+        arr.push(item);
+    });
+
+    var str ='';
+    arr.forEach(function(item){
+        str += '<li class="clear"><div class="div_left"></div><div class="div_right"></div><a href="../html/m-content.html?news_name='+item.news_name+'"title="'+item.title+'"><h4>'+item.title+'</h4><div class="new-span">'+item.time+'</div></a></li>';
+    });
+    document.getElementById("news-ul").innerHTML = str;
+
+    function the_txt(name,jsonData){
+        jsonData.forEach(function(item){
+            if(item.news_name==name){
+                $(".right_title").html(item.title);
+            }
+
+        });
+    }
+
+    var trs=$("#news-ul li");
+    var pagesize=15;
+    var curr=1;
+    var currRow= pagesize*curr;
+    var allpage= Math.ceil(trs.length/pagesize);
+
+    $(document).ready(function(){
+        hideTab();
+        curr=1;
+        $("#news-ul li:lt("+pagesize+")").css("display","block");
+        $("#spanTotalPage").text(allpage);
+        $("#spanPageNum").text(curr);
+        $("#the_note").text(trs.length);
+        $("#count").css({"width":"40px","border-radius":"2px","border-bottom":"1px solid #ccc","text-align":"center"});
+
+        if(allpage==1){
+            console.log(allpage);
+            $("#spanFirst").css({"display":"none"});
+            $("#spanPre").css({"display":"none"});
+            $("#spanNext").css({"display":"none"});
+            $("#spanLast").css({"display":"none"});
+            $("#li_btn").css({"display":"none"});
+        }
+    });
+
+
+    //通用隐藏方法
+    function hideTab(){
+        trs.css("display","none");
+    }
+
+
+    //为下一页 绑定点击事件
+    function spanNext(){
+        hideTab();
+        if(curr>allpage-1){
+            curr=allpage;
+        }else{
+            curr++;
+        }
+        var currRow=pagesize*curr;
+        $.each(trs,function(index,value){
+            if(index<currRow&&index>=currRow-pagesize){
+                var that=this;
+                that.style.display="block";
+            }
+        });
+        $("#spanPageNum").text(curr);
+    }
+    $("#spanNext").bind("click",spanNext);
+
+
+    //为上一页 绑定点击事件
+    function spanPre(){
+        hideTab();
+        if(curr<2){
+            curr=1;
+        }else{
+            curr--;
+        }
+        var currRow=pagesize*curr;
+        $.each(trs,function(index,value){
+            if(index<currRow&&index>=currRow-pagesize){
+                var that=this;
+                that.style.display="block";
+            }
+        });
+        $("#spanPageNum").text(curr);
+    }
+    $("#spanPre").bind("click",spanPre);
+
+    //为第一页绑定点击事件
+    function spanFirst(){
+        hideTab();
+        curr=1;
+        var currRow=pagesize*curr;
+        $.each(trs,function(index,value){
+            if(index<currRow&&index>=currRow-pagesize){
+                this.style.display="block";
+            }
+        });
+
+        $("#spanPageNum").text(curr);
+    }
+    $("#spanFirst").bind("click",spanFirst);
+
+
+    //为最后一页绑定点击事件
+    function spanLast(){
+        hideTab();
+        curr=allpage;
+        var currRow=pagesize*curr;
+        $.each(trs,function(index,value){
+            if(index<currRow&&index>=currRow-pagesize){
+                this.style.display="block";
+            }
+        });
+        $("#spanPageNum").text(curr);
+    }
+    $("#spanLast").bind("click",spanLast);
+
+
+    //手动输入input值变化
+    //为btn绑定 点击按钮刷新事件
+
+    $("#btn").click(function(){
+        if ($("#count").val().trim() ==""){
+            spanFirst();
+        }else if($("#count").val()>=1&&$("#count").val()<=allpage){
+            hideTab();
+            curr=$("#count").val();
+            var currRow=pagesize*curr;
+            $.each(trs,function(index,value){
+                if(index<currRow&&index>=currRow-pagesize){
+                    this.style.display="block";
+                }
+            });
+
+            $("#spanPageNum").text(curr);
+        }else{
+            alert("超出页数范围 或者 输入有误 \n请输入正确页码");
+        }
+    });
+
+
+</script>
